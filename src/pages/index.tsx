@@ -4,12 +4,12 @@ import {
     UserButton,
     useAuth,
     useUser,
-} from '@clerk/nextjs'
-import { type NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
+} from '@clerk/nextjs';
+import { type NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-import ChatScreen from './ChatScreen'
+import ChatScreen from './ChatScreen';
 
 const Home: NextPage = () => {
     return (
@@ -40,12 +40,12 @@ const Home: NextPage = () => {
                 </SignedOut>
             </main>
         </>
-    )
-}
+    );
+};
 
 const NavBar: NextPage = () => {
-    const { isSignedIn } = useAuth()
-    const { user } = useUser()
+    const { isSignedIn } = useAuth();
+    const { user } = useUser();
     return (
         <nav className="flex justify-between p-4">
             <div className="w-52"></div>
@@ -65,6 +65,6 @@ const NavBar: NextPage = () => {
                 )}
             </div>
         </nav>
-    )
-}
-export default Home
+    );
+};
+export default Home;

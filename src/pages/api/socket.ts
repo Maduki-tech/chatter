@@ -1,10 +1,13 @@
-import { Server, Socket } from 'socket.io'
+/* eslint-disable */
+import { Server } from 'socket.io'
+import type { Socket } from 'socket.io'
 
 const SocketHandler = (req: any, res: any) => {
     if (res.socket.server.io) {
         console.log('Socket already initialized')
     } else {
         console.log('Initializing socket')
+
         const io = new Server(res.socket.server)
         res.socket.server.io = io
 

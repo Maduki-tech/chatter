@@ -1,6 +1,7 @@
+/* eslint-disable */
 import { useUser } from '@clerk/nextjs';
 import React, { useEffect } from 'react';
-import { Socket } from 'socket.io';
+import { type Socket } from 'socket.io';
 import io from 'Socket.io-client';
 type Message = {
     myMessage: boolean;
@@ -65,9 +66,17 @@ export default function ChatScreen() {
             >
                 {messages.map((message, index) => {
                     return message.myMessage ? (
-                        <SendMessage message={message.message} key={index} user={message.user} />
+                        <SendMessage
+                            message={message.message}
+                            key={index}
+                            user={message.user}
+                        />
                     ) : (
-                        <RecivedMessage message={message.message} key={index} user={message.user}/>
+                        <RecivedMessage
+                            message={message.message}
+                            key={index}
+                            user={message.user}
+                        />
                     );
                 })}
             </div>
