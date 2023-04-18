@@ -1,8 +1,6 @@
 import React from 'react'
-import { SignIn as CSignIn} from '@clerk/nextjs'
+import { SignIn as CSignIn } from '@clerk/nextjs'
 
 export default function SignIn() {
-  return (
-    <CSignIn/>
-  )
+    return <CSignIn />
 }
