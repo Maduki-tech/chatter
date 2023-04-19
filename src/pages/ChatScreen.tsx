@@ -2,7 +2,7 @@
 import { useUser } from '@clerk/nextjs';
 import React, { useEffect } from 'react';
 import { type Socket } from 'socket.io';
-import io from 'Socket.io-client';
+import io from 'socket.io-client';
 type Message = {
     myMessage: boolean;
     user: string;
